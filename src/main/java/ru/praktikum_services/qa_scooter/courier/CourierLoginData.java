@@ -1,17 +1,16 @@
-package Courier;
+package ru.praktikum_services.qa_scooter.courier;
 
-public class CourierData {
+public class CourierLoginData {
     private String login;
     private String password;
-    private String firstName;
 
-    public CourierData() {
-    }
-
-    public CourierData(String login, String password, String firstName) {
+    public CourierLoginData(String login, String password) {
         this.login = login;
         this.password = password;
-        this.firstName = firstName;
+    }
+
+    public static CourierLoginData from(CourierData courierData) {
+        return new CourierLoginData(courierData.getLogin(), courierData.getPassword());
     }
 
     public String getLogin() {
@@ -28,13 +27,5 @@ public class CourierData {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 }

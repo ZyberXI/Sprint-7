@@ -1,4 +1,4 @@
-package Courier;
+package ru.praktikum_services.qa_scooter.Courier;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
@@ -7,6 +7,7 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import ru.praktikum_services.qa_scooter.courier.*;
 
 public class CourierLoginTest {
     private CourierData courierData;

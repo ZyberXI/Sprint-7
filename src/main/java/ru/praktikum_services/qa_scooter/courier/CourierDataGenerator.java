@@ -1,4 +1,4 @@
-package Courier;
+package ru.praktikum_services.qa_scooter.courier;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

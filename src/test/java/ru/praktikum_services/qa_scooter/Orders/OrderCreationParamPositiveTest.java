@@ -1,4 +1,4 @@
-package Orders;
+package ru.praktikum_services.qa_scooter.Orders;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
@@ -9,6 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ru.praktikum_services.qa_scooter.orders.OrderClient;
+import ru.praktikum_services.qa_scooter.orders.OrderData;
 
 import java.util.List;
 

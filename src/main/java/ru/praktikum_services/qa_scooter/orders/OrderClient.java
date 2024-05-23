@@ -1,11 +1,13 @@
-package Orders;
+package ru.praktikum_services.qa_scooter.orders;
 
-import constants.ApiEnum;
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
+import ru.praktikum_services.qa_scooter.constants.ApiEnum;
 
 import static io.restassured.RestAssured.given;
 
 public class OrderClient extends ApiEnum {
+    @Step("Создание нового заказа")
     public ValidatableResponse createNewOrder(OrderData orderData) {
         return given()
                 .spec(getSpec())
@@ -14,6 +16,7 @@ public class OrderClient extends ApiEnum {
                 .then();
     }
 
+    @Step("Откат заказа")
     public ValidatableResponse cancelNewOrder(int track) {
         return given()
                 .spec(getSpec())
@@ -23,6 +26,7 @@ public class OrderClient extends ApiEnum {
                 .then();
     }
 
+    @Step("Получение списка заказов")
     public ValidatableResponse getAllOrdersList() {
         return given()
                 .spec(getSpec())
@@ -31,6 +35,7 @@ public class OrderClient extends ApiEnum {
                 .then();
     }
 
+    @Step("Получение списка заказов по невалидному courierId")
     public ValidatableResponse getAllOrdersListWithInvalidCourierId(int courierId) {
         return given()
                 .spec(getSpec())

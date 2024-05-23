@@ -1,4 +1,4 @@
-package constants;
+package ru.praktikum_services.qa_scooter.constants;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;

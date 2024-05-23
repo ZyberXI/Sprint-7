@@ -1,4 +1,4 @@
-package Orders;
+package ru.praktikum_services.qa_scooter.Orders;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
@@ -6,6 +6,8 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
+import ru.praktikum_services.qa_scooter.orders.GetOrderList;
+import ru.praktikum_services.qa_scooter.orders.OrderClient;
 
 @DisplayName("Get Orders List Positive Tests")
 public class GetOrdersListPositiveTest {

@@ -1,4 +1,4 @@
-package Orders;
+package ru.praktikum_services.qa_scooter.orders;
 
 import java.util.List;
 

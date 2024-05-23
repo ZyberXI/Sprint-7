@@ -1,11 +1,13 @@
-package Orders;
+package ru.praktikum_services.qa_scooter.orders;
 
+import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class GetOrderList {
+    @Step("Валидация статус кода = 200. Проверка тела ответа orders не нулевое значение")
     public void getOrdersListWithOutCourierId(ValidatableResponse response) {
         response
                 .assertThat()
@@ -29,6 +31,7 @@ public class GetOrderList {
         }
     }
 
+    @Step("Валидация статус кода = 404. Проверка тела ответа message = Курьер с идентификатором {id курьера} не найден")
     public void getOrdersListWithInvalidCourierId(ValidatableResponse response, int courierId) {
         if (response.extract().statusCode() == 404) {
             response

@@ -1,7 +1,7 @@
-package Courier;
+package ru.praktikum_services.qa_scooter.courier;
 
-import constants.ApiEnum;
 import io.restassured.response.ValidatableResponse;
+import ru.praktikum_services.qa_scooter.constants.ApiEnum;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
